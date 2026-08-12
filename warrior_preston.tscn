@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dtexuqtb18nrl"]
+
+[ext_resource type="Shader" uid="uid://c80se1npk68xx" path="res://outline.gdshader" id="1_n014p"]
+[ext_resource type="Texture2D" uid="uid://o684luto137d" path="res://player/him/him_spritesheet.png" id="2_7yuid"]
+[ext_resource type="Texture2D" uid="uid://coc2ww0lqmaya" path="res://player/him/him_f/him_f.png" id="3_y861g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kkwig"]
+shader = ExtResource("1_n014p")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 5.0
+
+[node name="Warrior_Preston" type="Node2D" unique_id=986129479]
+
+[node name="Poly_Master" type="Node" parent="." unique_id=1888002126]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Poly_Master" unique_id=1487489072]
+material = SubResource("ShaderMaterial_kkwig")
+
+[node name="Polygon2D" type="Polygon2D" parent="Poly_Master/CanvasGroup" unique_id=824106016]
+
+[node name="Head_base" type="Sprite2D" parent="Poly_Master/CanvasGroup" unique_id=774559673]
+position = Vector2(322, -33)
+texture = ExtResource("2_7yuid")
+offset = Vector2(-1, -212)
+region_enabled = true
+region_rect = Rect2(127, 246, 360, 410)
+
+[node name="Hair" type="Sprite2D" parent="Poly_Master/CanvasGroup/Head_base" unique_id=1650381293]
+position = Vector2(2, -321)
+texture = ExtResource("2_7yuid")
+region_enabled = true
+region_rect = Rect2(564, 241, 395, 315)
+
+[node name="Eye_L" type="Sprite2D" parent="Poly_Master/CanvasGroup/Head_base" unique_id=926847563]
+position = Vector2(-62, -223.00002)
+scale = Vector2(0.8, 0.667)
+texture = ExtResource("2_7yuid")
+region_enabled = true
+region_rect = Rect2(1445, 441, 98, 72)
+
+[node name="Eyebrows_L" type="Sprite2D" parent="Poly_Master/CanvasGroup/Head_base/Eye_L" unique_id=2100209500]
+position = Vector2(-3.333334, -48)
+scale = Vector2(1.2, 1)
+texture = ExtResource("2_7yuid")
+region_enabled = true
+region_rect = Rect2(1049, 466, 88, 34)
+
+[node name="Eye_R" type="Sprite2D" parent="Poly_Master/CanvasGroup/Head_base" unique_id=1286615891]
+position = Vector2(59, -223)
+scale = Vector2(0.8, 0.667)
+texture = ExtResource("2_7yuid")
+region_enabled = true
+region_rect = Rect2(1645, 440, 98, 73)
+
+[node name="Eyebrows_L" type="Sprite2D" parent="Poly_Master/CanvasGroup/Head_base/Eye_R" unique_id=437341555]
+position = Vector2(-3.333334, -48)
+scale = Vector2(1.2, 1)
+texture = ExtResource("2_7yuid")
+region_enabled = true
+region_rect = Rect2(1234, 466, 87, 32)
+
+[node name="Nose" type="Sprite2D" parent="Poly_Master/CanvasGroup/Head_base" unique_id=1193304951]
+position = Vector2(0, -114)
+scale = Vector2(0.6, 0.35)
+texture = ExtResource("2_7yuid")
+region_enabled = true
+region_rect = Rect2(2183, 465, 118, 61)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Poly_Master/CanvasGroup" unique_id=350860943]
+position = Vector2(169, -400)
+texture = ExtResource("3_y861g")
+polygon = PackedVector2Array(126.79944, 163.27556, 132.05865, 171.54002, 134.31256, 179.05318, 137.31787, 185.06369, 139.57178, 195.58212, 141.82574, 204.5979, 141.82574, 212.86237, 135.0639, 217.37025, 132.05865, 224.88339, 132.57971, 231.06174, 136.82071, 234.03043, 141.90988, 234.45451, 146.99905, 234.03043, 152.51233, 235.30272, 165.65936, 235.7268, 169.47623, 231.48584, 171.59671, 228.09305, 170.74854, 222.57977, 167.77985, 217.9147, 164.81116, 214.09782, 163.11478, 205.19177, 162.69067, 195.29279, 165.23526, 185.11444, 166.93164, 177.05658, 170.74854, 170.27101, 175.8377, 162.21317)
+uv = PackedVector2Array(126.79944, 163.27556, 132.05865, 171.54002, 134.31256, 179.05318, 137.31787, 185.06369, 139.57178, 195.58212, 141.82574, 204.5979, 141.82574, 212.86237, 135.0639, 217.37025, 132.05865, 224.88339, 132.57971, 231.06174, 136.82071, 234.03043, 141.90988, 234.45451, 146.99905, 234.03043, 152.51233, 235.30272, 165.65936, 235.7268, 169.47623, 231.48584, 171.59671, 228.09305, 170.74854, 222.57977, 167.77985, 217.9147, 164.81116, 214.09782, 163.11478, 205.19177, 162.69067, 195.29279, 165.23526, 185.11444, 166.93164, 177.05658, 170.74854, 170.27101, 175.8377, 162.21317)
