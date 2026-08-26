@@ -28,7 +28,7 @@ fastify.post('/api/score', async (request, reply) => {
       message: '缺少 username 或 score 參數'
     });
   }
-
+ // check
   // 模擬存檔邏輯 (未來可在此寫入 SQLite / MongoDB)
   console.log(`[分數存檔] 玩家: ${username} | 分數: ${score}`);
 
