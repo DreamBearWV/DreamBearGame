@@ -1,12 +1,17 @@
 const Fastify = require('fastify');
 const fastify = Fastify({ logger: true });
 
-// 允許跨域請求 (提供 Godot 前端存取)
+// 允許跨域請求
 fastify.register(require('@fastify/cors'), { 
   origin: '*' 
 });
 
-// 測試用健康檢查 API
+// 根路由測試
+fastify.get('/', async (request, reply) => {
+  return { status: 'ok', message: 'Hello World from Raspberry Pi 5!' };
+});
+
+// 健康檢查 API 路由
 fastify.get('/api/health', async (request, reply) => {
   return { status: 'ok', message: '樹莓派 Node.js 後端運作正常！', timestamp: new Date() };
 });
