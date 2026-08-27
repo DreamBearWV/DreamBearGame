@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted  # 指定在樹莓派上執行
+    runs-on: self-hosted
 
     steps:
       - name: 拉取最新代碼
@@ -14,14 +14,15 @@ jobs:
 
       - name: 部署 Node.js 後端
         run: |
+          # 載入 PM2 與 Node 環境變數
+          export PATH=$PATH:/usr/local/bin:$HOME/.nvm/versions/node/$(node -v 2>/dev/null)/bin
           cd backend
           npm install --production
-          pm2 restart game-backend
+          pm2 restart game-backend || npx pm2 restart game-backend
 
       - name: 部署前端 Web 檔案至 Nginx
         run: |
-          sudo mkdir -p /var/www/dreambear-game
+          mkdir -p /var/www/dreambear-game
           if [ -d "frontend" ] && [ "$(ls -A frontend)" ]; then
-            sudo cp -r frontend/* /var/www/dreambear-game/
-            sudo chown -R $USER:$USER /var/www/dreambear-game
+            cp -r frontend/* /var/www/dreambear-game/
           fi
