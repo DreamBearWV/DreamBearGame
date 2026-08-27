@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://brfx1mryd7ymb"]
+
+[ext_resource type="Script" uid="uid://bw5uvchlaonp1" path="res://tower_spot.gd" id="1_8i0vn"]
+
+[node name="TowerSpot" type="Button" unique_id=1275458563]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+script = ExtResource("1_8i0vn")

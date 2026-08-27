@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Godot 4+ specific ignores
-.godot/
-/android/
-=======
 # Logs
 logs
 *.log
@@ -146,4 +141,3 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
->>>>>>> cc19b78eb86b0a6c99543bed05cd5bc2431e0a84

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bw47vwx0gbc22"]
+
+[ext_resource type="Script" uid="uid://b3gu1pru1glk3" path="res://tower.gd" id="1_vedim"]
+[ext_resource type="Texture2D" uid="uid://ciapm1thqvfth" path="res://player/him/him_f/him_f@150p.png" id="2_vedim"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kkwig"]
+radius = 150.0
+
+[node name="Tower" type="Node2D" unique_id=2064230899]
+script = ExtResource("1_vedim")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463578311]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vedim")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=1523586703]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1299375302]
+shape = SubResource("CircleShape2D_kkwig")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1434601048]
+wait_time = 0.8

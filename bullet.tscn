@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bcb16s2qpysjk"]
+
+[ext_resource type="Script" uid="uid://dfjngrx156jx6" path="res://bullet.gd" id="1_v7oki"]
+
+[node name="Bullet" type="Node2D" unique_id=209394621]
+script = ExtResource("1_v7oki")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=733845342]
+modulate = Color(0.43736997, 0.00028108357, 0.48498476, 1)
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
