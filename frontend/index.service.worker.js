@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1787798891|1529992001';
+const CACHE_VERSION = '1787799470|2109365972';
 /** @type {string} */
 const CACHE_PREFIX = 'WEB_Preston_Adve-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
